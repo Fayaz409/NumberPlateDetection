@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video for Number Plate Detection</title>
+</head>
+<body>
+    <h1>Upload Video for Number Plate Detection</h1>
+    <form action="/upload_video/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" accept="video/*" required>
+        <button type="submit">Upload</button>
+    </form>
+    <h2>Processed Video Stream</h2>
+    <video id="videoPlayer" width="640" height="480" controls autoplay>
+        <source src="/upload_video/" type="multipart/x-mixed-replace; boundary=frame">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
