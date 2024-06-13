@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize the NumberPlateDetector with your configuration files
-coco_model_path = "yolov8n.pt" # Path the model can be accessed from OpenCVanpr\anprproject\baseanpr\utils\license_plate_detector.pt in this project
-license_plate_model_path = "license_plate_detector.pt" # Path model can be accessed from OpenCVanpr\anprproject\baseanpr\utils\haarcascades\yolov8n.pt in this project
+coco_model_path = r"C:\Users\ftuni\Desktop\OpenCVanpr\anprproject\baseanpr\utils\haarcascades\yolov8n.pt" # Path the model can be accessed from OpenCVanpr\anprproject\baseanpr\utils\license_plate_detector.pt in this project
+license_plate_model_path = r"C:\Users\ftuni\Desktop\OpenCVanpr\anprproject\baseanpr\utils\haarcascades\license_plate_detector.pt" # Path model can be accessed from OpenCVanpr\anprproject\baseanpr\utils\haarcascades\yolov8n.pt in this project
 
 detector = NumberPlateDetector(coco_model_path=coco_model_path, license_plate_model_path=license_plate_model_path)
 
